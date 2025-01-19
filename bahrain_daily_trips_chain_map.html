@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_71396a630030c02f200bff1e6607d64e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_71396a630030c02f200bff1e6607d64e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_71396a630030c02f200bff1e6607d64e = L.map(
+                "map_71396a630030c02f200bff1e6607d64e",
+                {
+                    center: [26.215, 50.59],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db7df8d618069adbbf3facfbf7b00983 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_db7df8d618069adbbf3facfbf7b00983.addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_e5e25a014026bbb64b532fd5ecb70121 = L.marker(
+                [26.199785, 50.600867],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_4ddaf60c8ca516e482f0e52927510dad = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_e5e25a014026bbb64b532fd5ecb70121.setIcon(beautify_icon_4ddaf60c8ca516e482f0e52927510dad);
+        
+    
+        var popup_d006145b9e22566ac75cca431cd5b7ab = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_a000313b1e2f23128c2ade2926051a84 = $(`<div id="html_a000313b1e2f23128c2ade2926051a84" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Mina Salman<br>             <b>Time:</b> 9:47:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_d006145b9e22566ac75cca431cd5b7ab.setContent(html_a000313b1e2f23128c2ade2926051a84);
+            
+        
+
+        marker_e5e25a014026bbb64b532fd5ecb70121.bindPopup(popup_d006145b9e22566ac75cca431cd5b7ab)
+        ;
+
+        
+    
+    
+            var marker_fca9da03f00c396b08e09777d4665620 = L.marker(
+                [26.23105, 50.57065],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_46011b6313a111940d61b99fb44af5fa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_fca9da03f00c396b08e09777d4665620.setIcon(beautify_icon_46011b6313a111940d61b99fb44af5fa);
+        
+    
+        var popup_3c95f51f3ecfb09cf8371d59d786c77d = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2b684dab1aa590ec415e169b0dade0f5 = $(`<div id="html_2b684dab1aa590ec415e169b0dade0f5" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Manama Terminal 5<br>             <b>Time:</b> 10:16:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_3c95f51f3ecfb09cf8371d59d786c77d.setContent(html_2b684dab1aa590ec415e169b0dade0f5);
+            
+        
+
+        marker_fca9da03f00c396b08e09777d4665620.bindPopup(popup_3c95f51f3ecfb09cf8371d59d786c77d)
+        ;
+
+        
+    
+    
+            var poly_line_fcd1a6f6f95b349316711b15f17c153d = L.polyline(
+                [[26.199785, 50.600867], [26.23105, 50.57065]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_2b0e3ec3688eeea4fce15a103e53f4c0 = L.marker(
+                [26.2154175, 50.5857585],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_51c1c6b76999591bf54372a80c6f50a2 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 1\u003c/b\u003e\u003c/div\u003e"});
+            marker_2b0e3ec3688eeea4fce15a103e53f4c0.setIcon(div_icon_51c1c6b76999591bf54372a80c6f50a2);
+        
+    
+            var marker_80dc872499db59c86ffd3096b9e3d793 = L.marker(
+                [26.23104, 50.57064],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_95b26488b417395624e2fe5e8dc65e54 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_80dc872499db59c86ffd3096b9e3d793.setIcon(beautify_icon_95b26488b417395624e2fe5e8dc65e54);
+        
+    
+        var popup_80aed3bbfbd9b1fe3e7cb715211765d2 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_5104d609a975d96520c4529ea125e30f = $(`<div id="html_5104d609a975d96520c4529ea125e30f" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Manama Terminal 5<br>             <b>Time:</b> 10:16:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_80aed3bbfbd9b1fe3e7cb715211765d2.setContent(html_5104d609a975d96520c4529ea125e30f);
+            
+        
+
+        marker_80dc872499db59c86ffd3096b9e3d793.bindPopup(popup_80aed3bbfbd9b1fe3e7cb715211765d2)
+        ;
+
+        
+    
+    
+            var marker_b5f87e6a69fd5f6012f3f6af0b53d021 = L.marker(
+                [26.234783, 50.57609],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_3f8a2ba3959bf2e7c2042f13098dc7ed = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_b5f87e6a69fd5f6012f3f6af0b53d021.setIcon(beautify_icon_3f8a2ba3959bf2e7c2042f13098dc7ed);
+        
+    
+        var popup_4236664da8af6225f5105cf229c3f255 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_c0e35fa60b28fd46837ae68233e25d7c = $(`<div id="html_c0e35fa60b28fd46837ae68233e25d7c" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Bab AlBahrain<br>             <b>Time:</b> 12:22:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_4236664da8af6225f5105cf229c3f255.setContent(html_c0e35fa60b28fd46837ae68233e25d7c);
+            
+        
+
+        marker_b5f87e6a69fd5f6012f3f6af0b53d021.bindPopup(popup_4236664da8af6225f5105cf229c3f255)
+        ;
+
+        
+    
+    
+            var poly_line_6800940c2554b3f62f90542b7fbdb2bb = L.polyline(
+                [[26.23104, 50.57064], [26.234783, 50.57609]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_d7771c236747cf61f8f561b44e8e2adb = L.marker(
+                [26.2329115, 50.573364999999995],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_0fc7cc2d10b2a83ea73d328c86520493 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 2\u003c/b\u003e\u003c/div\u003e"});
+            marker_d7771c236747cf61f8f561b44e8e2adb.setIcon(div_icon_0fc7cc2d10b2a83ea73d328c86520493);
+        
+    
+            var marker_f4e225d3b3741af6ecbe5d9d70c7422c = L.marker(
+                [26.234784, 50.5761],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_a1b42fc06095d2f49d2b1d74087d3dbf = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_f4e225d3b3741af6ecbe5d9d70c7422c.setIcon(beautify_icon_a1b42fc06095d2f49d2b1d74087d3dbf);
+        
+    
+        var popup_6d3333228db0e5e8d52e0aeab6fd9bce = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4a00c5e3abe3b35d57286e2a424d95ea = $(`<div id="html_4a00c5e3abe3b35d57286e2a424d95ea" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Bab AlBahrain<br>             <b>Time:</b> 12:22:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_6d3333228db0e5e8d52e0aeab6fd9bce.setContent(html_4a00c5e3abe3b35d57286e2a424d95ea);
+            
+        
+
+        marker_f4e225d3b3741af6ecbe5d9d70c7422c.bindPopup(popup_6d3333228db0e5e8d52e0aeab6fd9bce)
+        ;
+
+        
+    
+    
+            var marker_111618dd8a9d368ee2042fd655e6a535 = L.marker(
+                [26.249289, 50.607951],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_553ec27d89215047ba866fecf88c2f22 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_111618dd8a9d368ee2042fd655e6a535.setIcon(beautify_icon_553ec27d89215047ba866fecf88c2f22);
+        
+    
+        var popup_fce1b690156d268e62eb323754fb1461 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_a9e8e3321a2715f93d91ca050b869c78 = $(`<div id="html_a9e8e3321a2715f93d91ca050b869c78" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Muharraq Terminal 2<br>             <b>Time:</b> 12:35:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_fce1b690156d268e62eb323754fb1461.setContent(html_a9e8e3321a2715f93d91ca050b869c78);
+            
+        
+
+        marker_111618dd8a9d368ee2042fd655e6a535.bindPopup(popup_fce1b690156d268e62eb323754fb1461)
+        ;
+
+        
+    
+    
+            var poly_line_c28bb65bf1d6729e55f03653ccbd5504 = L.polyline(
+                [[26.234784, 50.5761], [26.249289, 50.607951]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_ebab595c583a1f8e19b7f26cde36b2a4 = L.marker(
+                [26.2420365, 50.5920255],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_d73fef8d135fdcc9bbadf25a5a6756d3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 3\u003c/b\u003e\u003c/div\u003e"});
+            marker_ebab595c583a1f8e19b7f26cde36b2a4.setIcon(div_icon_d73fef8d135fdcc9bbadf25a5a6756d3);
+        
+    
+            var marker_21565816a6f8e54010c5ccc758e81dc5 = L.marker(
+                [26.249106, 50.607773],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_c4019aaca1adae69d603be167aee8024 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_21565816a6f8e54010c5ccc758e81dc5.setIcon(beautify_icon_c4019aaca1adae69d603be167aee8024);
+        
+    
+        var popup_4fe4b601116ed0d5e612b7777f4e598b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_62116d480814dbdd3d9137fbb7c2c238 = $(`<div id="html_62116d480814dbdd3d9137fbb7c2c238" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Muharraq Terminal 4<br>             <b>Time:</b> 13:23:00<br>             <b>Route:</b> 22             </div>`)[0];
+                popup_4fe4b601116ed0d5e612b7777f4e598b.setContent(html_62116d480814dbdd3d9137fbb7c2c238);
+            
+        
+
+        marker_21565816a6f8e54010c5ccc758e81dc5.bindPopup(popup_4fe4b601116ed0d5e612b7777f4e598b)
+        ;
+
+        
+    
+    
+            var marker_04fca424cdd684060ed6030da9245820 = L.marker(
+                [26.23805, 50.58595],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_b2b1982db676e819a6e9091e5cc261fa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_04fca424cdd684060ed6030da9245820.setIcon(beautify_icon_b2b1982db676e819a6e9091e5cc261fa);
+        
+    
+        var popup_2ccc86677a9ac2229b9b0842bc53c1fc = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_087e3f9f7d05d1a94c20f7262b349024 = $(`<div id="html_087e3f9f7d05d1a94c20f7262b349024" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Palace Avenue-2<br>             <b>Time:</b> 13:35:00<br>             <b>Route:</b> 22             </div>`)[0];
+                popup_2ccc86677a9ac2229b9b0842bc53c1fc.setContent(html_087e3f9f7d05d1a94c20f7262b349024);
+            
+        
+
+        marker_04fca424cdd684060ed6030da9245820.bindPopup(popup_2ccc86677a9ac2229b9b0842bc53c1fc)
+        ;
+
+        
+    
+    
+            var poly_line_91f5c1fdfaa5c99213c58fa66b0e2b4e = L.polyline(
+                [[26.249106, 50.607773], [26.23805, 50.58595]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_3b3838596fdb3ca569072e54fbec8609 = L.marker(
+                [26.243578, 50.5968615],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_9295e9bcbb6e1d5540c6cadbae784c7b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 4\u003c/b\u003e\u003c/div\u003e"});
+            marker_3b3838596fdb3ca569072e54fbec8609.setIcon(div_icon_9295e9bcbb6e1d5540c6cadbae784c7b);
+        
+    
+            var marker_b50ce23cb029dff7af5c5a607df3f122 = L.marker(
+                [26.23806, 50.58596],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_e5e6b864504ede28684ab5255f544b68 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_b50ce23cb029dff7af5c5a607df3f122.setIcon(beautify_icon_e5e6b864504ede28684ab5255f544b68);
+        
+    
+        var popup_7b0f23dcea55f47d6c8a2540a958bca1 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_165efa62b6dafbe47d976ba0517a41fe = $(`<div id="html_165efa62b6dafbe47d976ba0517a41fe" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Palace Avenue-2<br>             <b>Time:</b> 13:36:00<br>             <b>Route:</b> 45             </div>`)[0];
+                popup_7b0f23dcea55f47d6c8a2540a958bca1.setContent(html_165efa62b6dafbe47d976ba0517a41fe);
+            
+        
+
+        marker_b50ce23cb029dff7af5c5a607df3f122.bindPopup(popup_7b0f23dcea55f47d6c8a2540a958bca1)
+        ;
+
+        
+    
+    
+            var marker_e11dd77c5f1083fb1732fcf6f48839e0 = L.marker(
+                [26.226969, 50.588117],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_e1d3ee2cc44c7cf811eddc160ba33ced = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_e11dd77c5f1083fb1732fcf6f48839e0.setIcon(beautify_icon_e1d3ee2cc44c7cf811eddc160ba33ced);
+        
+    
+        var popup_735da82808d5b0c56fda0854e2e65537 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_701f9092bc88dd73e6341072b36f5fb8 = $(`<div id="html_701f9092bc88dd73e6341072b36f5fb8" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Palace Avenue-6<br>             <b>Time:</b> 14:06:00<br>             <b>Route:</b> 45             </div>`)[0];
+                popup_735da82808d5b0c56fda0854e2e65537.setContent(html_701f9092bc88dd73e6341072b36f5fb8);
+            
+        
+
+        marker_e11dd77c5f1083fb1732fcf6f48839e0.bindPopup(popup_735da82808d5b0c56fda0854e2e65537)
+        ;
+
+        
+    
+    
+            var poly_line_93fa67fb409219cb851978e9638c4191 = L.polyline(
+                [[26.23806, 50.58596], [26.226969, 50.588117]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_ca36c7941d630be932c4ccf84d32fc7c = L.marker(
+                [26.2325145, 50.5870385],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_153f19d0c403d41728af604120a33e90 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 5\u003c/b\u003e\u003c/div\u003e"});
+            marker_ca36c7941d630be932c4ccf84d32fc7c.setIcon(div_icon_153f19d0c403d41728af604120a33e90);
+        
+    
+            var marker_1db762ae973a305689a746973b951b10 = L.marker(
+                [26.226967, 50.588115],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_02b8bef6c6c2963d13cbb4735f221808 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_1db762ae973a305689a746973b951b10.setIcon(beautify_icon_02b8bef6c6c2963d13cbb4735f221808);
+        
+    
+        var popup_de02f5a8b04b0c0fe181a92a2d1bdd4e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_1a937a967450da68271013bb7706cbcd = $(`<div id="html_1a937a967450da68271013bb7706cbcd" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Palace Avenue-6<br>             <b>Time:</b> 14:06:00<br>             <b>Route:</b> 45             </div>`)[0];
+                popup_de02f5a8b04b0c0fe181a92a2d1bdd4e.setContent(html_1a937a967450da68271013bb7706cbcd);
+            
+        
+
+        marker_1db762ae973a305689a746973b951b10.bindPopup(popup_de02f5a8b04b0c0fe181a92a2d1bdd4e)
+        ;
+
+        
+    
+    
+            var marker_1384028057fddf06df8b9d41110c2597 = L.marker(
+                [26.234418, 50.575338],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_986fbcb3c93a55113f32cd8343d629b3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_1384028057fddf06df8b9d41110c2597.setIcon(beautify_icon_986fbcb3c93a55113f32cd8343d629b3);
+        
+    
+        var popup_14d84f9ceb8ad20b74a65974bf7d5b29 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ff127301f1fe47c268ffb4199aff0ef6 = $(`<div id="html_ff127301f1fe47c268ffb4199aff0ef6" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Manama Post Office<br>             <b>Time:</b> 14:17:00<br>             <b>Route:</b> 45             </div>`)[0];
+                popup_14d84f9ceb8ad20b74a65974bf7d5b29.setContent(html_ff127301f1fe47c268ffb4199aff0ef6);
+            
+        
+
+        marker_1384028057fddf06df8b9d41110c2597.bindPopup(popup_14d84f9ceb8ad20b74a65974bf7d5b29)
+        ;
+
+        
+    
+    
+            var poly_line_d3f0c1939dc8cd22b46251b48357fad2 = L.polyline(
+                [[26.226967, 50.588115], [26.234418, 50.575338]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_5cddac603e0923e84266bc6916e70cbd = L.marker(
+                [26.2306925, 50.5817265],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_f645f41b8e50baff7168092402eee2b7 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 6\u003c/b\u003e\u003c/div\u003e"});
+            marker_5cddac603e0923e84266bc6916e70cbd.setIcon(div_icon_f645f41b8e50baff7168092402eee2b7);
+        
+    
+            var marker_2bd95f16978a6777efed990a95a49d89 = L.marker(
+                [26.234782, 50.57608],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_b2bfbd73bdd6a169f2184e85eb96d627 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_2bd95f16978a6777efed990a95a49d89.setIcon(beautify_icon_b2bfbd73bdd6a169f2184e85eb96d627);
+        
+    
+        var popup_3569c7bd469b08913d53508cc7a63e93 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4f64c6e7f809ca60502d02ea8a281efe = $(`<div id="html_4f64c6e7f809ca60502d02ea8a281efe" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Bab AlBahrain<br>             <b>Time:</b> 14:26:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_3569c7bd469b08913d53508cc7a63e93.setContent(html_4f64c6e7f809ca60502d02ea8a281efe);
+            
+        
+
+        marker_2bd95f16978a6777efed990a95a49d89.bindPopup(popup_3569c7bd469b08913d53508cc7a63e93)
+        ;
+
+        
+    
+    
+            var marker_e40bf9b3b48aef304c388d7fede886c2 = L.marker(
+                [26.25065, 50.65115],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_3017fa7d3d580c1120757d5620a2ff2c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_e40bf9b3b48aef304c388d7fede886c2.setIcon(beautify_icon_3017fa7d3d580c1120757d5620a2ff2c);
+        
+    
+        var popup_e9566b1e540308e359fdc32b0846b821 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ad5361f80aa8f09fd663fdb9f3dad18c = $(`<div id="html_ad5361f80aa8f09fd663fdb9f3dad18c" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Arad Park<br>             <b>Time:</b> 15:13:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_e9566b1e540308e359fdc32b0846b821.setContent(html_ad5361f80aa8f09fd663fdb9f3dad18c);
+            
+        
+
+        marker_e40bf9b3b48aef304c388d7fede886c2.bindPopup(popup_e9566b1e540308e359fdc32b0846b821)
+        ;
+
+        
+    
+    
+            var poly_line_973236cfda9a4bd2d15c6982b562857e = L.polyline(
+                [[26.234782, 50.57608], [26.25065, 50.65115]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_f360305faa2a6992074ab2f48b00d932 = L.marker(
+                [26.242716, 50.613614999999996],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_7b820bd9f3a8fdc8a6fcf9732df5dbe4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 7\u003c/b\u003e\u003c/div\u003e"});
+            marker_f360305faa2a6992074ab2f48b00d932.setIcon(div_icon_7b820bd9f3a8fdc8a6fcf9732df5dbe4);
+        
+    
+            var marker_3f8c907f165611239187f44a69c9bc9c = L.marker(
+                [26.25066, 50.65116],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_165573d7349e12ca9906e909302ce7dd = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 218, 185, 0.5)", "borderColor": "peach", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_3f8c907f165611239187f44a69c9bc9c.setIcon(beautify_icon_165573d7349e12ca9906e909302ce7dd);
+        
+    
+        var popup_7fa0e924f43593da50981730d7396088 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2c6550cb1763bc2ab5f32dc09a859bc9 = $(`<div id="html_2c6550cb1763bc2ab5f32dc09a859bc9" style="width: 100.0%; height: 100.0%;">             <b>Tap-In Stop:</b> Arad Park<br>             <b>Time:</b> 16:24:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_7fa0e924f43593da50981730d7396088.setContent(html_2c6550cb1763bc2ab5f32dc09a859bc9);
+            
+        
+
+        marker_3f8c907f165611239187f44a69c9bc9c.bindPopup(popup_7fa0e924f43593da50981730d7396088)
+        ;
+
+        
+    
+    
+            var marker_342096d8d18ad6c97cf79bbde6db88f0 = L.marker(
+                [26.201183, 50.600329],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var beautify_icon_ca78ddd3bc9f7856b85e84219d6747e3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "rgba(255, 127, 80, 0.5)", "borderColor": "coral", "borderWidth": 3, "icon": "bus", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_342096d8d18ad6c97cf79bbde6db88f0.setIcon(beautify_icon_ca78ddd3bc9f7856b85e84219d6747e3);
+        
+    
+        var popup_5f0881038c2a49e561ea936f226eecfa = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_00dde39abf9a960ea77ce6f8958b79d2 = $(`<div id="html_00dde39abf9a960ea77ce6f8958b79d2" style="width: 100.0%; height: 100.0%;">             <b>Tap-Out Stop:</b> Fire Station<br>             <b>Time:</b> 16:54:00<br>             <b>Route:</b> 10             </div>`)[0];
+                popup_5f0881038c2a49e561ea936f226eecfa.setContent(html_00dde39abf9a960ea77ce6f8958b79d2);
+            
+        
+
+        marker_342096d8d18ad6c97cf79bbde6db88f0.bindPopup(popup_5f0881038c2a49e561ea936f226eecfa)
+        ;
+
+        
+    
+    
+            var poly_line_85c12e32fc0f313f66523d0802dbbb8e = L.polyline(
+                [[26.25066, 50.65116], [26.201183, 50.600329]],
+                {"bubblingMouseEvents": true, "color": "teal", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "teal", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var marker_2e27d88c0689fd1674406b39a5950101 = L.marker(
+                [26.2259215, 50.625744499999996],
+                {}
+            ).addTo(map_71396a630030c02f200bff1e6607d64e);
+        
+    
+            var div_icon_80c481e3e8982437bc58a06c8f452f7b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12px; color: black;\"\u003e\u003cb\u003eTrip 8\u003c/b\u003e\u003c/div\u003e"});
+            marker_2e27d88c0689fd1674406b39a5950101.setIcon(div_icon_80c481e3e8982437bc58a06c8f452f7b);
+        
+</script>
+</html>
