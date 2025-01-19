@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Zain Ul Abedin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .grid-2x2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-1x4 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+        .project-header {
+            padding: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .project-body {
+            padding: 1rem;
+        }
+        .project-body img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .project-body p {
+            margin: 0.5rem 0;
+        }
+        .project-body ul {
+            padding-left: 1.5rem;
+        }
+        .project-body ul li {
+            margin: 0.5rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+			
+            transform: translate(-50%, 0);
+            width: 85%;
+            max-height: 85%;
+            z-index: 1000;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
+        .modal-content img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .modal-header {
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zain Ul Abedin</h1>
+        
+		<a href="index.html#project-move" style="text-decoration: none; color: #4CAF50;">Return to CV</a>
+
+
+
+    </header>
+
+    <div class="container">
+        <!-- Grid Layout -->
+        <div class="grid grid-2x2">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: Monitoring</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_Monitoring.gif" alt="Project 1" onclick="openModal('images/projects/Move/MOVE_Monitoring.gif', 'MOVE: Monitoring')">
+                    <p>It enables real-time tracking of active bus assets within the network, identifying each bus by its route, direction, and block id. It provides live ETA estimates for all stops, additionally, all live tracking data is stored for post-event analysis and playback, enhancing operational insights and decision-making.</p>
+                    
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: On-Time Performance</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_OnTime_Performance.gif" alt="Project 2" onclick="openModal('images/projects/Move/MOVE_OnTime_Performance.gif', 'MOVE: On-Time Performance')">
+                    <p>It evaluates the on-time performance of the entire network and individual routes, identifying the best and worst-performing routes and stops. It offers multiple views, including a timeline, day-of-week and hourly analysis,providing comprehensive insights into service reliability.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: Public Transit Network Analysis</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_Network_Analysis.gif" alt="Project 2" onclick="openModal('images/projects/Move/MOVE_Network_Analysis.gif', 'MOVE: Public Transit Network Analysis')">
+                    <p>It rovides a high-level overview of public transit performance, showcasing key metrics such as ridership, fare collection, reliability, and speed across the network. It identifies the best and worst-performing routes, offering a bird’s-eye view for assessing overall system performance.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: Public Transit Route Analysis</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_Route_Analysis.gif" alt="Project 2" onclick="openModal('images/projects/Move/MOVE_Route_Analysis.gif', 'MOVE: Public Transit Route Analysis')">
+                    <p>It delivers a detailed analysis of route-level performance, encompassing metrics from the network level alongside route topology, ridership, average speed, temporal boarding levels, on-time performance, farebox recovery and service losses, providing comprehensive route performance insights.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: Public Transit Stop Analysis</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_Stop_Analysis.gif" alt="Project 2" onclick="openModal('images/projects/Move/MOVE_Stop_Analysis.gif', 'MOVE: Public Transit Stop Analysis')">
+                    <p>MOVE offers stop-level insights, including key metrics, ridership data, and the route-wise ridership share for each stop. It features an interactive map view and provides detailed information about each stop, such as its type, amenities, and associated attributes, enabling comprehensive analysis and visualization.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-header">MOVE: AI Mobility Mind</div>
+                <div class="project-body">
+                    <img src="images/projects/Move/MOVE_AI_Mobility_Mind.gif" alt="Project 2" onclick="openModal('images/projects/Move/MOVE_AI_Mobility_Mind.gif', 'MOVE: AI Mobility Mind')">
+                    <p>It integrates a generative AI component, trained on extensive historical data, to provide key statistics and insights into network and route performance. Users can query the AI for detailed analysis and actionable insights, enhancing decision-making and operational efficiency.</p>
+                    
+                </div>
+            </div>
+			
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+    <div class="modal" id="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-header" id="modal-title"></div>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <footer>
+         <p> <a href="mailto:zainulabedinqr@gmail.com">zainulabedinqr@gmail.com</a> | <a href="https://www.linkedin.com/in/zain-ul-abedin-bh" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=DFRS_B4AAAAJ&hl=en" target="_blank">GoogleScholar</a></p>
+    </footer>
+
+    <script>
+        // Open Modal
+        function openModal(imageSrc, title) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

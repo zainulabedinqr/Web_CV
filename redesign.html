@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Zain Ul Abedin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .grid-2x2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-1x4 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+        .project-header {
+            padding: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .project-body {
+            padding: 1rem;
+        }
+        .project-body img {
+			width: 100%;
+			height: 320px; /* Adjust this value as needed for uniform height */
+			object-fit: cover; /* Ensures the image scales and crops proportionally to fit */
+			cursor: pointer;
+		}
+        .project-body p {
+            margin: 0.5rem 0;
+        }
+        .project-body ul {
+            padding-left: 1.5rem;
+        }
+        .project-body ul li {
+            margin: 0.5rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+			
+            transform: translate(-50%, 0);
+            width: 85%;
+            max-height: 85%;
+            z-index: 1000;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
+        .modal-content img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .modal-header {
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zain Ul Abedin</h1>
+        
+		<a href="index.html#project-redesign" style="text-decoration: none; color: #4CAF50;">Return to CV</a>
+
+
+
+    </header>
+
+    <div class="container">
+        <!-- Grid Layout -->
+        <div class="grid grid-2x2">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-header">Network Redesign: Facility Accessibility</div>
+                <div class="project-body">
+                    <img src="images/projects/Redesign/Redesign_Travel_Time_Zonal.png" alt="Project 1" onclick="openModal('images/projects/Redesign/Redesign_Travel_Time_Zonal.png', 'Network Redesign: Facility Accessibility')">
+                    <p>Performed a temporal accessibility analysis to assess travel times to major destinations, including a central hospital, from all other zones in the network using GTFS, OSM data and r5py library. The hourly travel time maps over a 19-hour period illustrates variations in public transport connectivity.</p>
+                    
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-header">Network Redesign: High Temporal Resolution Reachability</div>
+                <div class="project-body">
+                    <img src="images/projects/Redesign/Redesign_7_9_PT_Network_5_min.gif" alt="Project 2" onclick="openModal('images/projects/Redesign/Redesign_7_9_PT_Network_5_min.gif', 'Network Redesign: High Temporal Resolution Accessibility')">
+                    <p>Calculated 5-minute interval reachability from transit terminal during peak hours to provide a high-res understanding of accessibility dynamics. This approach ensures more accurate and meaningful insights for real-world transit system users by addressing temporal fluctuations in transit connectivity.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-header">Network Redesign: Stop Accessibility</div>
+                <div class="project-body">
+                    <img src="images/projects/Redesign/Redesign_Stop_Accessibility.gif" alt="Project 2" onclick="openModal('images/projects/Redesign/Redesign_Stop_Accessibility.gif', 'Network Redesign: Stop Accessibility')">
+                    <p>Conducted multiple stop-level accessibility analysis using actual walking times based on a speed of 4.8 km/h. For up to 8 minutes of walking, combined the resulting polygons with zonal boundaries to estimate the population's accessibility to stops within the defined walking time.</p>
+                    
+                </div>
+            </div>
+			
+			<!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-header">Network Redesign: Network Configurations</div>
+                <div class="project-body">
+                    <img src="images/projects/Redesign/Redesign_Max_Min_Network.png" alt="Project 2" onclick="openModal('images/projects/Redesign/Redesign_Max_Min_Network.png', 'Network Redesign: Network Configurations')">
+                    <p>Two network configurations are compared: one prioritizing maximum ridership with reduced wait times and lower population accessibility (50%); the other focusing on maximum coverage, with increased population accessibility (75%) but with longer wait times, using the same level of resources.</p>
+                    
+                </div>
+            </div>
+			
+						
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+    <div class="modal" id="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-header" id="modal-title"></div>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <footer>
+         <p> <a href="mailto:zainulabedinqr@gmail.com">zainulabedinqr@gmail.com</a> | <a href="https://www.linkedin.com/in/zain-ul-abedin-bh" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=DFRS_B4AAAAJ&hl=en" target="_blank">GoogleScholar</a></p>
+    </footer>
+
+    <script>
+        // Open Modal
+        function openModal(imageSrc, title) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
